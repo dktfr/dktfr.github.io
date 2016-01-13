@@ -2,7 +2,8 @@
 layout: post
 title:  "회사생활 7일차 일기"
 date:   2016-01-10 18:52:21
-categories: jekyll update
+categories: diary
+comments: true
 ---
 오늘로 벌써 회사생활 7일째 완료! 이때까지 든 생각을 몇자 끄적여 봐야겠다.
 

@@ -3,10 +3,23 @@ layout: page
 title: About
 permalink: /about/
 icon: glyphicon-heart
+comments: true
 ---
 
 * content
 {:toc}
+
+## About me
+
+* Name : BeomSeok. Jang.
+* Company : NHN Entertainment
+
+
+### 2015 Old blog 
+Here is my old personal blog when I was in University.
+
+* [beomseok's old blog before 2015](http://blog.naver.com/dktfr).
+
 
 ## About the site
 This is a personal website of LiXizhi, created with github and jekyll. 
@@ -40,15 +53,4 @@ local function main()
 	print("hello world everyone")
 end
 {% endhighlight %}
-
-
-## About me
-
-My primary research interest is in artificial intelligence, programming and education. See my project page for details.
-
-
-### 2005 Old Website 
-Here is my old personal website when I was in University. It was mostly on my projects and thoughts before 2005.
-
-* [Xizhi's old website before 2005](/oldsite2005/index.htm). 
 

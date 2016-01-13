@@ -2,7 +2,8 @@
 layout: post
 title:  "Jekyll을 이용한 markdown 페이지 설정 참고 사이트"
 date:   2016-01-10 18:52:21
-categories: jekyll update
+category: tech
+comments: true
 ---
 회사에서 Github페이지를 만들기 위해 jekyll을 이용하라는 두번째 사전과제를 하기 위해 참고한 웹사이트를 소개한다.
 
