@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "OAuth에 대한 이해(수정중)"
+title:  "OAuth에 대한 이해_15일 교육내용 필기내용"
 date:   2016-01-10 18:52:21
 category: tech
 comments: true
@@ -26,11 +26,6 @@ comments: true
 * Implicit Grant
 * Resource Owner Password Credentials Grant
 
-Authorization Code Grant
+## Authorization Code Grant
 302 응답코드를 이용해 애플리케이션 서버와 OAuth 프로바이더가 유기적으로 데이터를 주고받음
-```sequence
-Title:OAuth
-사용자->브라우저:로그인 버튼 클릭
-브라우저->애플리케이션 서버:버튼 클릭 요청
-애플리케이션 서버->OAuth 프로바이더:OAuth 인증 요
-```
+[시퀀스 다이어그램](./OAuth.png)
