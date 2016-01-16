@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "OAuth에 대한 이해(수정중)"
+date:   2016-01-10 18:52:21
+category: tech
+comments: true
+---
+# OAuth
+## 용어
+* Authentication - 내가 나라는 것을 증명
+* Authorization - 내가 어디까지 이용할수 있는가에 대한 권한
+* OAuth는 권한에 대한 표준 스펙
+
+## 역할
+* 리소스서버 : 자원을 호스팅하는 서버(ex 페이스북 사진 비디오 등)
+* 리소스 소유자 : 사용자
+* 클라이언트 리소스 서버에서 제공하는 자원을 사용하는 애플리케이션(ex 페이스북의 뉴스를 모아 보여줌)
+* 권한 서버 : 사용자의 동의를 받아서 권한을 부여하는 서버. 일반적으로 리소스 서버와 같은 URL에 있는 경우가 많다.
+
+## 비밀번호 방식 문제
+* 신뢰 : 사용자가 애플리케이션에 ID/PW 제공하기 꺼려함
+* 피싱에 둔감해짐 : 각종 어플리케이션들에 ID/PW를 계속 제공하는 경우
+
+## 인증 종류
+* Authorization Code Grant
+* Implicit Grant
+* Resource Owner Password Credentials Grant
+
+Authorization Code Grant
+302 응답코드를 이용해 애플리케이션 서버와 OAuth 프로바이더가 유기적으로 데이터를 주고받음
+```sequence
+Title:OAuth
+사용자->브라우저:로그인 버튼 클릭
+브라우저->애플리케이션 서버:버튼 클릭 요청
+애플리케이션 서버->OAuth 프로바이더:OAuth 인증 요
+```
