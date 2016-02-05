@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "OAuth에 대한 이해_15일 교육내용 필기내용"
+date:   2016-01-10 18:52:21
+category: tech
+comments: true
+---
+# Git 기본개념
+## 저장소 개념
+* 로컬
+	* working directory : 로컬에서 실제로 작업하는 영역		(Unstaging 상태)
+						↓ add
+	* index : working directory와 repository 사이의 영역	(Staging 상태)
+						↓ commit
+	* repository : 버전관리되는 영역(.git 디렉터리)
+				 push ↓ ↑ fetch(remote->repo) & pull(remote->working directory)
+* 원격
+	* remote : 서버 영역. 다른이들과 소스 공유가능
+
+## 기본기능
+### 생성
+* init : 새로운(비어있는) git repository를 생성한다.
+* clone : 다른 repository를 복제하여 생성한다.
+
+### 이동 기능
+* add : working directory -> index (staging)
+* 
