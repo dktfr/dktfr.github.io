@@ -28,4 +28,4 @@ comments: true
 
 ## Authorization Code Grant
 302 응답코드를 이용해 애플리케이션 서버와 OAuth 프로바이더가 유기적으로 데이터를 주고받음
-![시퀀스 다이어그램]({{ site.url }}/images/OAuth.png?raw=true)
+![시퀀스 다이어그램]({{ site.url }}/images/OAuth.png)
