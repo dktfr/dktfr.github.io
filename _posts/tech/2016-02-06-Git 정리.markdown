@@ -21,11 +21,9 @@ comments: true
 
 ### 로컬
 * working directory : 로컬에서 실제로 작업하는 영역		(Unstaging 상태)
- 			   add ↓ ↑ rm 
 * index : working directory와 repository 사이의 영역	(Staging 상태)
- 					↓ commit
 * repository : 버전관리되는 영역(.git 디렉터리)
- 			  push ↓ ↑ fetch(remote->repo) & pull(remote->working directory)
+
 ### 원격
 * remote : 서버 영역. 다른이들과 소스 공유가능
 
