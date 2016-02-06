@@ -1,7 +1,7 @@
 # Site settings
 title: Beomseok's Personal Website
 email: beomseok.jang@nhnent.com
-description: Xizhi's Ideas & Blogs
+description: beomseok's Ideas & Blogs
 # > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
@@ -15,8 +15,6 @@ permalink: /:year/:month/:day/:title/
 
 #########################################
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
-#duoshuo_shortname: lixizhi
-#duoshuo_url: "http://lixizhi.github.io"
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
 disqus_shortname: dktfrgithubio
 disqus_url: "http://dktfr.github.io"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "회사생활 7일차 일기"
-date:   2016-01-10 18:52:21
+date:   2016-01-08 18:52:21
 categories: diary
 comments: true
 ---
