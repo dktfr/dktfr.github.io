@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git 개념 정리 - 수정중"
+title:  "Git 개념 정리 수정중"
 date:   2016-02-06 18:52:21
 category: tech
 comments: true
