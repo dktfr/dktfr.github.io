@@ -10,7 +10,7 @@ comments: true
 ## 1.생성자 대신 Static Factory 메서드를 이용할 수 있는지 고려하라
 * Static Factory 메서드 : 생성자 대신 객체를 생성해주는 static 메서드.
 * ex
-``` java
+```java
 public class A {
 	public static A getInstance() {
 		return new A();
@@ -24,17 +24,17 @@ public class A {
 	* 형인자 자료형(Parameterized Type) 객체를 만들 때 편하다.
 		* 형인자 자료형 갹채 : 제네릭 타입을 선언한 객체
 		* ex 생성자를 이용한 생성
-``` java
-Map<String, Object> map = new HashMap<String, Object>();		// 생성자 호출 시 Type을 반드시 명시해줘야 한다.
-```
+		```java
+		Map<String, Object> map = new HashMap<String, Object>();		// 생성자 호출 시 Type을 반드시 명시해줘야 한다.
+		```
 		* ex Static Factory 메서드를 이용한 생성
-``` java
-public static <K, V> HashMap<K, V> newInstance() {
-	return new HashMap<K, V>();
-}
-
-Map<String, Object> map = HashMap.newInstance();
-```
+		```java
+		public static <K, V> HashMap<K, V> newInstance() {
+			return new HashMap<K, V>();
+		}
+		
+		Map<String, Object> map = HashMap.newInstance();
+		```
 		* JDK 1.7부터는 생성자로 객체 생성시 Type을 생략 가능하다. ex) `Map<String, Object> map = new HashMap<>();`
 * 단점
 	* 모든 생성자를 private으로 감추고 Static Factory 메서드만 지원할 경우 서브클래스를 생성할 수 없다.
