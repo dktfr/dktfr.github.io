@@ -6,6 +6,7 @@ category: tech
 comments: true
 ---
 # 객체의 생성과 삭제
+
 ## 1.생성자 대신 Static Factory 메서드를 이용할 수 있는지 고려하라
 * Static Factory 메서드 : 생성자 대신 객체를 생성해주는 static 메서드.
 * ex
