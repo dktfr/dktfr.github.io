@@ -25,6 +25,16 @@ markdown: kramdown
 future:	true
 
 # highlight
+
+higilighter: true
+
+Java:
+  type: programming
+  ace_mode: java
+  color: "#b07219"
+  extensions:
+  - .java
+
 # highlighter: pygments
 # highlighter: rouge
 # highlighter: false
