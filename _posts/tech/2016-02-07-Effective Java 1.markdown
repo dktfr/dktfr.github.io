@@ -123,3 +123,88 @@ A obj = new A.Builder(1, 2).optionalField1(3).optionalField2(4).optionalField3(5
 * Builder 패턴 단점
 	* 객체를 생성하기 위해 빌더 객체를 생성하는 오버헤드가 있다.
 	* 빌더 패턴은 많은 코드를 요구하기 때문에 인자가 충분히 많은 상황에서 사용해야 한다.
+
+## 3.싱글턴 패턴을 사용할 때, private 생성자나 enum 자료형으로 설계하라
+* 싱글턴 패턴의 단점
+	* 싱글턴 객체를 Mock으로 대체하기가 어렵기 때문에 테스트가 어렵다.
+	* 생성자를 private으로 만들더라도 리플렉션 API를 이용하면 private 생성자를 호출할 수 있다.
+	* 직렬화에 대한 처리를 해주어야 한다.
+
+{% highlight java %}
+//Private으로 선언된 생성자 호출하는 예제
+public class PrivateInvoker {
+	public static void main(String[] args) throws Exception {
+		//리플렉션 setAccessible 메서드를 통해 private으로 선언된 생성자 호출 권한을 획득
+		Constructor<?> con = Private.class.getDeclaredConstructor()[0];
+		con.setAccessible(true);
+		Private p = (Private) con.newInstance();
+	}
+}
+
+class Private {
+	private Private() {
+		System.out.println("이것은 private 생성자 입니다.");
+	}
+}
+{% endhighlight %}
+
+* 싱글턴 패턴 구현방법 3가지
+	1. private 생성자 + public static 필드
+	2. private 생성자 + static factory 메서드
+	3. enum 자료형(JDK 1.5부터 가능)
+
+{% highlight java %}
+// 1.private 생성자 + public static 필드
+public class SingletonClass {
+	public static final SingletonClass INSTANCE = new SingletonClass();
+	private SingletonClass() {
+		...
+	}
+	public void leaveTheBuilding() {
+		...
+	}
+}
+
+// 2.private 생성자 + static factory 메서드
+public class SingletonClass {
+	private static final SingletonClass INSTANCE = new SingletonClass();
+	public static SingletonClass getInstance() {
+		return INSTANCE;
+	}
+	private SingletonClass() {
+		...
+	}
+	public void leaveTheBuilding() {
+		...
+	}
+}
+
+// 3.enum 자료형
+public enum SingletonEnum {
+	INSTANCE;
+	
+	public void leaveTheBuilding() {
+		...
+	}
+}
+{% endhighlight %}
+
+## 4.객체 생성이 필요 없을 때는 private 생성자를 사용하라
+* static field들이 모여있는 클래스를 설계할 경우에는 객체를 생성할 필요가 없다.
+* 객체 생성을 못하게 하려면 private 생성자를 클래스에 명시적으로 선언해 준다.
+* 필요없는 생성자를 선언한 것이므로 Javadoc 등으로 주석처리를 해두면 좋다.
+
+{% highlight java %}
+public class UtilityClass {
+	// 기본 생성자가 자동 생성되지 않도록 하여 객체 생성 방지
+	private UtilityClass() {
+		throw new AssertionError();
+	}
+}
+{% endhighlight %}
+
+## 5.불필요한 객체는 만들지 말라
+* 기능적으로 동일한 객체는 필요할 때마다 만드는 것보다 캐싱하여 재사용하는 편이 낫다.
+	* Static 초기화 블록을 이용할 것을 고려한다.
+* Wrapper 클래스의 Auto Boxing기능을 이용하면 객체가 추가로 생기게 된다.
+* 생성비용이 싼 객체라면 코드 가독성을 고려하여 Object Pool 사용을 자제한다.
