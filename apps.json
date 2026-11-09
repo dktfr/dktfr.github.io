@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "apps": [
+    {
+      "id": "emojird",
+      "name": {
+        "ko": "이모지 랜덤디펜스",
+        "en": "Emoji Defence",
+        "ja": "絵文字ディフェンス",
+        "zh-Hans": "表情塔防",
+        "zh-Hant": "表情塔防"
+      },
+      "icon": "https://dktfr.github.io/app/icon/emojird/icon.png",
+      "android": "com.dktfr.emojird.app"
+    }
+  ]
+}
